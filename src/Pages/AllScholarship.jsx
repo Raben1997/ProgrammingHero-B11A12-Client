@@ -72,10 +72,8 @@ const AllScholarship = () => {
                     All Scholarships
                 </h2>
 
-                {/* Search and Per Page Control */}
                 <div className="flex flex-col gap-4 sm:flex-row md:items-center md:justify-between mb-6">
 
-                    {/* 🔍 Search Box */}
                     <div className="flex items-center gap-2 w-full md:w-auto">
                         <input
                             type="text"
@@ -92,7 +90,6 @@ const AllScholarship = () => {
                         </button>
                     </div>
 
-                    {/* 🔢 Items Per Page */}
                     <div className="flex items-center max-sm:justify-start gap-2">
                         <label className="text-green-700 font-medium whitespace-nowrap">
                             Items per page:
@@ -112,8 +109,6 @@ const AllScholarship = () => {
 
                 </div>
 
-
-                {/* Loader/Error/Empty */}
                 {isLoading ? (
                     <p className="text-center text-green-600">Loading scholarships...</p>
                 ) : isError ? (
@@ -129,7 +124,6 @@ const AllScholarship = () => {
                     </div>
                 ) : (
                     <>
-                        {/* Card Grid */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {paginatedData.map((item) => (
                                 <div
@@ -144,33 +138,22 @@ const AllScholarship = () => {
                                     <h3 className="text-green-700 pb-4 md:pb-5 lg:pb-6">
                                         {item.scholarshipName}
                                     </h3>
-                                    {/* 🏷️ Scholarship Category */}
                                     <p className="text-sm text-gray-700">
                                         <span className="font-medium">Category:</span> {item.category}
                                     </p>
-
-                                    {/* 📍 Location */}
                                     <p className="text-sm text-gray-700">
                                         <span className="font-medium">Location:</span> {item.city}, {item.country}
                                     </p>
-
-                                    {/* 📆 Deadline */}
                                     <p className="text-sm text-gray-700">
                                         <span className="font-medium">Deadline:</span>{" "}
                                         {new Date(item.deadline).toLocaleDateString()}
                                     </p>
-
-                                    {/* 📚 Subject */}
                                     <p className="text-sm text-gray-700">
                                         <span className="font-medium">Subject:</span> {item.subject}
                                     </p>
-
-                                    {/* 💸 Application Fee */}
                                     <p className="text-sm text-gray-700">
                                         <span className="font-medium">Application Fee:</span> ₹{item.applicationFee}
                                     </p>
-
-                                    {/* ⭐ Rating */}
                                     <p className="text-sm text-gray-700 flex items-center gap-1">
                                         <span className="font-medium">Rating:</span>
                                         {item.averageRating ? (
@@ -184,8 +167,6 @@ const AllScholarship = () => {
                                             "Not rated"
                                         )}
                                     </p>
-
-                                    {/* 🔍 Details Button */}
                                     <div className="mt-4 text-right">
                                         <Link
                                             to={`/scholarships/${item._id}`}
@@ -197,8 +178,6 @@ const AllScholarship = () => {
                                 </div>
                             ))}
                         </div>
-
-                        {/* Pagination */}
                         {totalPages > 1 && (
                             <div className="flex justify-center items-center mt-8 gap-4">
                                 <button

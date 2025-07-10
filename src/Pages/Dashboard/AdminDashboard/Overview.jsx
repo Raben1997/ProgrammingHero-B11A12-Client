@@ -56,7 +56,6 @@ const Overview = () => {
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Bar Chart Card */}
         <div className="bg-white rounded-2xl shadow p-4">
           <h4 className="text-green-700 text-center mb-2">
             Scholarship Summary
@@ -72,7 +71,6 @@ const Overview = () => {
           </ResponsiveContainer>
         </div>
 
-        {/* Pie Chart Card */}
         <div className="bg-white rounded-2xl shadow p-4">
           <h4 className="text-green-700 text-center mb-2">
             Application Status Breakdown

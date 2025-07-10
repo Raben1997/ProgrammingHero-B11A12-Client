@@ -7,7 +7,6 @@ const UserDashboard = () => {
         <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col">
-                {/* Top Navbar (Mobile) */}
                 <div className='max-lg:bg-primary'>
                     <div className='container'>
                         <div className="max-lg:navbar max-lg:w-full text-white justify-between !px-0 !py-3 lg:!py-0">
@@ -37,24 +36,20 @@ const UserDashboard = () => {
                     </div>
                 </div>
 
-                {/* Page Content */}
                 <div className="container sec-gap">
                     <Outlet></Outlet>
                 </div>
             </div>
 
-            {/* Sidebar */}
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                 <ul className="menu bg-primary text-white min-h-full w-80 p-4 space-y-1">
-                    {/* Logo */}
                     <div className="mb-5 text-center">
                         <Link to={"/"}>
                             <img src={logo} className="max-w-[160px] inline-block" alt="Logo" />
                         </Link>
                     </div>
 
-                    {/* Sidebar Links */}
                     <li>
                         <NavLink
                             to="/dashboard/user/my-profile"

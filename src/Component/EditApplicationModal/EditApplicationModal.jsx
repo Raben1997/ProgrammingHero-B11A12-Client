@@ -61,9 +61,7 @@ const EditApplicationModal = ({ application, onClose, onSubmit }) => {
 
         <form onSubmit={handleSubmit(submitForm)} className="grid grid-cols-1 md:grid-cols-2 gap-3">
 
-          {/* Photo Upload */}
           <div className="col-span-2">
-            {/* ✅ Show default or uploaded image */}
             {imageURL && (
               <div className="mb-3">
                 <p className="text-green-600 text-sm mb-1">Current Photo Preview:</p>
@@ -85,7 +83,6 @@ const EditApplicationModal = ({ application, onClose, onSubmit }) => {
               accept="image/*"
             />
           </div>
-          {/* Phone */}
           <div>
             <label className="label text-green-600">Phone Number</label>
             <input
@@ -95,8 +92,6 @@ const EditApplicationModal = ({ application, onClose, onSubmit }) => {
             />
             {errors.phone && <p className="text-red-600 text-sm">{errors.phone.message}</p>}
           </div>
-
-          {/* Address */}
           <div>
             <label className="label text-green-600">Address</label>
             <input
@@ -106,8 +101,6 @@ const EditApplicationModal = ({ application, onClose, onSubmit }) => {
             />
             {errors.address && <p className="text-red-600 text-sm">{errors.address.message}</p>}
           </div>
-
-          {/* Gender */}
           <div>
             <label className="label text-green-600">Gender</label>
             <select {...register("gender")} className="select select-bordered border-green-600 w-full">
@@ -116,8 +109,6 @@ const EditApplicationModal = ({ application, onClose, onSubmit }) => {
               <option value="Other">Other</option>
             </select>
           </div>
-
-          {/* Degree */}
           <div>
             <label className="label text-green-600">Degree</label>
             <select {...register("degree")} className="select select-bordered border-green-600 w-full">
@@ -126,8 +117,6 @@ const EditApplicationModal = ({ application, onClose, onSubmit }) => {
               <option value="Masters">Masters</option>
             </select>
           </div>
-
-          {/* SSC Result */}
           <div>
             <label className="label text-green-600">SSC Result</label>
             <input
@@ -139,8 +128,6 @@ const EditApplicationModal = ({ application, onClose, onSubmit }) => {
             />
             {errors.sscResult && <p className="text-red-600 text-sm">{errors.sscResult.message}</p>}
           </div>
-
-          {/* HSC Result */}
           <div>
             <label className="label text-green-600">HSC Result</label>
             <input
@@ -152,8 +139,6 @@ const EditApplicationModal = ({ application, onClose, onSubmit }) => {
             />
             {errors.hscResult && <p className="text-red-600 text-sm">{errors.hscResult.message}</p>}
           </div>
-
-          {/* Study Gap */}
           <div>
             <label className="label text-green-600">Study Gap</label>
             <select {...register("studyGap")} className="select select-bordered border-green-600 w-full">
@@ -162,9 +147,6 @@ const EditApplicationModal = ({ application, onClose, onSubmit }) => {
               <option value="2+ Years">2+ Years</option>
             </select>
           </div>
-
-
-          {/* Action Buttons */}
           <div className="md:col-span-2 mt-4 flex justify-end gap-4">
             <button type="submit" className="btn bg-green-600 hover:bg-green-700 text-white">
               {uploading ? "Uploading Photo..." : "Update Application"}

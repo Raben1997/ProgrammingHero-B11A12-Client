@@ -5,15 +5,13 @@ const FeedbackModal = ({ isOpen, feedback, setFeedback, onSubmit, onClose, appli
 
     return (
         <dialog open className="modal modal-open">
-            {/* Transparent Overlay */}
             <form method="dialog" className="modal-backdrop  bg-opacity-10" onClick={onClose}>
                 <button type="button">close</button>
             </form>
 
-            {/* Modal Box */}
             <div
                 className="modal-box w-full max-w-md p-6"
-                onClick={(e) => e.stopPropagation()} // prevent close when clicking inside modal
+                onClick={(e) => e.stopPropagation()}
             >
                 <h3 className="font-bold text-lg mb-4 text-green-700 text-center">
                     Submit Feedback for {applicantName || "Applicant"}

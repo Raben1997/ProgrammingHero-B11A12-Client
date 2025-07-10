@@ -76,7 +76,7 @@ const ApplyScholarship = () => {
       userEmail: user?.email,
       appliedAt: new Date(),
       status: "pending",
-      paymentStatus: "unpaid", // ✅ added default payment status
+      paymentStatus: "unpaid",
     };
 
     try {
@@ -95,7 +95,6 @@ const ApplyScholarship = () => {
         });
 
         if (result.isConfirmed) {
-          // ✅ Use the inserted application ID
           navigate(`/payment/${res.data.insertedId}`);
         } else {
           Swal.fire("Info", "You can complete payment later from your dashboard.", "info");
@@ -208,7 +207,6 @@ const ApplyScholarship = () => {
               </select>
             </div>
 
-            {/* Read-only Fields */}
             <div>
               <label className="label text-green-600">Scholarship Name</label>
               <input

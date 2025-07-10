@@ -103,7 +103,6 @@ const ManageAppliedApplication = () => {
         <div className="p-4">
             <h2 className="text-xl font-bold text-green-700 mb-4 text-center">All Applied Scholarships</h2>
 
-            {/* ✅ Combined Filter & Sort */}
             <div className="mb-4 flex justify-end items-center gap-2">
                 <label>Sort By : </label>
                 <select
@@ -120,7 +119,6 @@ const ManageAppliedApplication = () => {
                 </select>
             </div>
 
-            {/* ✅ Table */}
             <div className="overflow-x-auto">
                 <table className="table w-full border border-green-600">
                     <thead className="bg-green-100 text-green-700">
@@ -191,7 +189,6 @@ const ManageAppliedApplication = () => {
                 </table>
             </div>
 
-            {/* ✅ Modals */}
             {modalType === "details" && selectedApp && (
                 <ApplicationDetailsModal app={selectedApp} onClose={closeModal} />
             )}

@@ -53,33 +53,22 @@ const TopScholarship = () => {
                                     <p className="text-sm text-gray-700">
                                         <span className="font-medium">University Name:</span> {item.universityName}
                                     </p>
-                                    {/* 🏷️ Scholarship Category */}
                                     <p className="text-sm text-gray-700">
                                         <span className="font-medium">Category:</span> {item.category}
                                     </p>
-
-                                    {/* 📍 Location */}
                                     <p className="text-sm text-gray-700">
                                         <span className="font-medium">Location:</span> {item.city}, {item.country}
                                     </p>
-
-                                    {/* 📆 Deadline */}
                                     <p className="text-sm text-gray-700">
                                         <span className="font-medium">Deadline:</span>{" "}
                                         {new Date(item.deadline).toLocaleDateString()}
                                     </p>
-
-                                    {/* 📚 Subject */}
                                     <p className="text-sm text-gray-700">
                                         <span className="font-medium">Subject:</span> {item.subject}
                                     </p>
-
-                                    {/* 💸 Application Fee */}
                                     <p className="text-sm text-gray-700">
                                         <span className="font-medium">Application Fee:</span> ₹{item.applicationFee}
                                     </p>
-
-                                    {/* ⭐ Rating */}
                                     <p className="text-sm text-gray-700 flex items-center gap-1">
                                         <span className="font-medium">Rating:</span>
                                         {item.averageRating ? (
@@ -93,8 +82,6 @@ const TopScholarship = () => {
                                             "Not rated"
                                         )}
                                     </p>
-
-                                    {/* 🔍 Details Button */}
                                     <div className="mt-4 text-right">
                                         <Link
                                             to={`/scholarships/${item._id}`}
@@ -106,8 +93,6 @@ const TopScholarship = () => {
                                 </div>
                             ))}
                         </div>
-
-                        {/* 🔗 See All Button */}
                         <div className="text-center mt-8">
                             <Link
                                 to="/allScholarship"

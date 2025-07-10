@@ -17,7 +17,7 @@ const MyProfile = () => {
         }
     });
 
-    console.log(userData);
+    // console.log(userData);
 
     if (isLoading) return <Loading />;
 

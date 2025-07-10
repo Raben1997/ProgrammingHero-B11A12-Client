@@ -195,7 +195,6 @@ const MyApplications = () => {
                 </table>
             </div>
 
-            {/* Modals */}
             {modalType === "details" && selectedApp && (
                 <ApplicationDetailsModal app={selectedApp} onClose={closeModal} />
             )}

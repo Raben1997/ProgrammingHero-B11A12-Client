@@ -123,7 +123,6 @@ const ManageScholarships = () => {
                 </table>
             </div>
 
-            {/* ✅ Preview Modal */}
             {previewScholarship && (
                 <dialog
                     open
@@ -136,7 +135,6 @@ const ManageScholarships = () => {
                 >
                     <div className="modal-box">
 
-                        {/* Logo/Image */}
                         <img
                             src={previewScholarship.logo}
                             alt={previewScholarship.scholarshipName}
@@ -147,7 +145,6 @@ const ManageScholarships = () => {
                             {previewScholarship.scholarshipName}
                         </h3>
 
-                        {/* Scholarship Info */}
                         <div className="space-y-1 text-sm">
                             {Object.entries(previewScholarship).map(([key, value]) =>
                                 !["_id", "website", "description", "averageRating", "logo"].includes(key) ? (
@@ -158,7 +155,6 @@ const ManageScholarships = () => {
                             )}
                         </div>
 
-                        {/* Close button bottom-right */}
                         <div className="modal-action justify-end">
                             <button onClick={() => setPreviewScholarship(null)} className="btn bg-red-600 text-white">
                                 Close
@@ -169,7 +165,6 @@ const ManageScholarships = () => {
             )}
 
 
-            {/* ✅ Edit Modal */}
             {editingScholarship && (
                 <dialog
                     open
@@ -187,7 +182,6 @@ const ManageScholarships = () => {
 
                         <form onSubmit={handleUpdateSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                            {/* ✅ Image Preview */}
                             <div className="md:col-span-2 text-center">
                                 <img
                                     src={formData.logo}
@@ -196,7 +190,6 @@ const ManageScholarships = () => {
                                 />
                             </div>
 
-                            {/* ✅ File Upload */}
                             <div className="md:col-span-2">
                                 <label className="label text-green-600">Upload New Logo</label>
                                 <input
@@ -229,7 +222,6 @@ const ManageScholarships = () => {
                                 />
                             </div>
 
-                            {/* ✅ Dynamic Form Fields */}
                             {Object.entries(formData).map(([key, value]) =>
                                 key !== "_id" &&
                                     key !== "logo" &&
@@ -242,7 +234,6 @@ const ManageScholarships = () => {
                                             {key.replace(/([A-Z])/g, " $1").replace(/^./, (c) => c.toUpperCase())}
                                         </label>
 
-                                        {/* Select Inputs */}
                                         {["subject", "category", "degree"].includes(key) ? (
                                             <select
                                                 value={formData[key] || ""}
@@ -287,7 +278,6 @@ const ManageScholarships = () => {
                                 ) : null
                             )}
 
-                            {/* ✅ Description textarea field at the end */}
                             {formData.description !== undefined && (
                                 <div className="md:col-span-2">
                                     <label className="label text-green-600">Description (Optional)</label>
@@ -303,7 +293,6 @@ const ManageScholarships = () => {
                                 </div>
                             )}
 
-                            {/* ✅ Buttons */}
                             <div className="modal-action md:col-span-2 justify-end">
                                 <button
                                     type="submit"

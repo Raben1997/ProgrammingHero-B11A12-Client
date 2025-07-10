@@ -78,7 +78,6 @@ const AddScholarship = () => {
 
             <form onSubmit={handleSubmit(onSubmit)} className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-                {/* Scholarship Name */}
                 <div>
                     <label className="label text-green-600">Scholarship Name</label>
                     <input
@@ -89,7 +88,6 @@ const AddScholarship = () => {
                     {errors.scholarshipName && <p className="text-red-600 text-sm">{errors.scholarshipName.message}</p>}
                 </div>
 
-                {/* University Name */}
                 <div>
                     <label className="label text-green-600">University Name</label>
                     <input
@@ -100,7 +98,6 @@ const AddScholarship = () => {
                     {errors.universityName && <p className="text-red-600 text-sm">{errors.universityName.message}</p>}
                 </div>
 
-                {/* University Logo Upload */}
                 <div>
                     <label className="label text-green-600">University Logo/Image</label>
                     <input
@@ -113,7 +110,6 @@ const AddScholarship = () => {
                     {imageURL && <p className="text-green-600 text-sm">Image uploaded</p>} */}
                 </div>
 
-                {/* Country */}
                 <div>
                     <label className="label text-green-600">University Country</label>
                     <input
@@ -124,7 +120,6 @@ const AddScholarship = () => {
                     {errors.country && <p className="text-red-600 text-sm">{errors.country.message}</p>}
                 </div>
 
-                {/* City */}
                 <div>
                     <label className="label text-green-600">University City</label>
                     <input
@@ -135,7 +130,6 @@ const AddScholarship = () => {
                     {errors.city && <p className="text-red-600 text-sm">{errors.city.message}</p>}
                 </div>
 
-                {/* World Rank */}
                 <div>
                     <label className="label text-green-600">University World Rank</label>
                     <input
@@ -147,7 +141,6 @@ const AddScholarship = () => {
                     {errors.worldRank && <p className="text-red-600 text-sm">{errors.worldRank.message}</p>}
                 </div>
 
-                {/* Subject Category */}
                 <div>
                     <label className="label text-green-600">Subject Category</label>
                     <select {...register("subject")} className="select select-bordered border-green-600 w-full">
@@ -157,7 +150,6 @@ const AddScholarship = () => {
                     </select>
                 </div>
 
-                {/* Scholarship Category */}
                 <div>
                     <label className="label text-green-600">Scholarship Category</label>
                     <select {...register("category")} className="select select-bordered border-green-600 w-full">
@@ -167,7 +159,6 @@ const AddScholarship = () => {
                     </select>
                 </div>
 
-                {/* Degree */}
                 <div>
                     <label className="label text-green-600">Degree</label>
                     <select {...register("degree")} className="select select-bordered border-green-600 w-full">
@@ -177,13 +168,11 @@ const AddScholarship = () => {
                     </select>
                 </div>
 
-                {/* Tuition Fee (optional) */}
                 <div>
                     <label className="label text-green-600">Tuition Fees (Optional)</label>
                     <input {...register("tuitionFee")} className="input input-bordered border-green-600 w-full" placeholder="e.g. 5000 INR" />
                 </div>
 
-                {/* Application Fee */}
                 <div>
                     <label className="label text-green-600">Application Fee</label>
                     <input
@@ -195,7 +184,6 @@ const AddScholarship = () => {
                     {errors.applicationFee && <p className="text-red-600 text-sm">{errors.applicationFee.message}</p>}
                 </div>
 
-                {/* Service Charge */}
                 <div>
                     <label className="label text-green-600">Service Charge</label>
                     <input
@@ -207,7 +195,6 @@ const AddScholarship = () => {
                     {errors.serviceCharge && <p className="text-red-600 text-sm">{errors.serviceCharge.message}</p>}
                 </div>
 
-                {/* Application Deadline */}
                 <div>
                     <label className="label text-green-600">Application Deadline</label>
                     <input
@@ -218,7 +205,6 @@ const AddScholarship = () => {
                     {errors.deadline && <p className="text-red-600 text-sm">{errors.deadline.message}</p>}
                 </div>
 
-                {/* Post Date */}
                 <div>
                     <label className="label text-green-600">Scholarship Post Date</label>
                     <input
@@ -230,7 +216,6 @@ const AddScholarship = () => {
                     {errors.postDate && <p className="text-red-600 text-sm">{errors.postDate.message}</p>}
                 </div>
 
-                {/* Posted By Email */}
                 <div>
                     <label className="label text-green-600">Posted User Email</label>
                     <input
@@ -242,7 +227,6 @@ const AddScholarship = () => {
                     {errors.postedEmail && <p className="text-red-600 text-sm">{errors.postedEmail.message}</p>}
                 </div>
 
-                {/* Scholarship Website (Optional) */}
                 <div>
                     <label className="label text-green-600">Description (Optional)</label>
                     <input
@@ -253,7 +237,6 @@ const AddScholarship = () => {
                     />
                 </div>
 
-                {/* Submit Button */}
                 <div className="md:col-span-2 mt-4">
                     <button type="submit" className="btn bg-green-600 hover:bg-green-700 text-white w-full">
                         {uploading ? "Uploading..." : "Add Scholarship"}

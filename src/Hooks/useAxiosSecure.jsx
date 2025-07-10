@@ -4,7 +4,7 @@ import useAuth from './useAuth';
 import { useNavigate } from 'react-router';
 
 const axiosSecure = axios.create({
-    baseURL: `http://localhost:3000`
+    baseURL: `https://scholarship-management-system-serve.vercel.app`
 });
 
 const useAxiosSecure = () => {
@@ -17,8 +17,6 @@ const useAxiosSecure = () => {
         const requestInterceptor = axiosSecure.interceptors.request.use(
             (config) => {
                 config.headers.Authorization = `Bearer ${user.accessToken}`;
-                console.log(user.accessToken);
-                console.log('✅ Auth Header Set:', config.headers.Authorization);
                 return config;
             },
             (error) => Promise.reject(error)
@@ -28,7 +26,7 @@ const useAxiosSecure = () => {
             (res) => res,
             async (error) => {
                 const status = error?.response?.status;
-                console.log('Inside Res Interceptor', status);
+                // console.log('Inside Res Interceptor', status);
 
                 if (status === 403) {
                     navigate('/forbidden');

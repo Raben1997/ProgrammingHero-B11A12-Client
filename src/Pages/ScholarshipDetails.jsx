@@ -80,7 +80,6 @@ const ScholarshipDetails = () => {
     return (
         <div className="sec-gap container">
             <h2 className="text-center text-green-600">Scholarship Details</h2>
-            {/* 🏫 Scholarship Card */}
             <div className="card lg:card-side bg-base-100 shadow-xl border border-green-600 bg-green-50">
                 <figure className="p-6 w-full lg:w-1/2">
                     <img
@@ -119,17 +118,14 @@ const ScholarshipDetails = () => {
                 </div>
             </div>
 
-            {/* ✅ Reviews Section */}
 
             {
                 reviews.length > 0 && <div className="sec-gap !pb-0">
                     <div className="container">
-                        {/* ✅ Section Heading */}
                         <h2 className="text-center text-green-600">
                             What Students Say About This Scholarship
                         </h2>
 
-                        {/* ✅ Swiper Slider */}
                         <Swiper
                             modules={[Pagination, Navigation]}
                             spaceBetween={30}
@@ -154,7 +150,6 @@ const ScholarshipDetails = () => {
                                 <SwiperSlide key={index}>
                                     <div className="card bg-green-50 border border-green-100 shadow-md hover:shadow-xl transition-all h-full">
                                         <div className="card-body">
-                                            {/* User Info */}
                                             <div className="flex items-center gap-4 mb-4">
                                                 <img
                                                     src={review.reviewerPhoto}
@@ -168,16 +163,12 @@ const ScholarshipDetails = () => {
                                                     </span>
                                                 </div>
                                             </div>
-
-                                            {/* Rating */}
                                             <Rating
                                                 initialRating={review.rating}
                                                 readonly
                                                 emptySymbol={<FaRegStar className="text-gray-300 text-base" />}
                                                 fullSymbol={<FaStar className="text-yellow-400 text-base" />}
                                             />
-
-                                            {/* Comment */}
                                             <p className="text-gray-700 leading-relaxed !p-0">{review.comment}</p>
                                         </div>
                                     </div>
@@ -205,7 +196,6 @@ const ScholarshipDetails = () => {
 
 
 
-            {/* 📝 Review Modal */}
             {showReviewModal && (
                 <dialog open className="modal modal-bottom sm:modal-middle">
                     <div className="modal-box">

@@ -56,7 +56,7 @@ const AuthProvider = ({ children }) => {
                 const token = await currentUser.getIdToken();
                 currentUser.accessToken = token;
                 setUser(currentUser);
-                console.log(currentUser);
+                // console.log(currentUser);
             } else {
                 setUser(null);
             }
