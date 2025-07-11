@@ -6,7 +6,7 @@ A full-stack web application to manage and apply for scholarships, built with **
 
 ## 🔗 Live Site
 
-[🔗 Visit the live app](https://your-deployment-url.com)
+[🔗 Visit the live app](https://scholarship-management-system1.web.app)
 
 ---
 
