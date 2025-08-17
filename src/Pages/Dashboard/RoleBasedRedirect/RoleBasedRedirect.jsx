@@ -14,7 +14,7 @@ const RoleBasedRedirect = () => {
             const lowerRole = role.toLowerCase();
 
             if (lowerRole === 'admin') {
-                navigate('/dashboard/admin/my-profile');
+                navigate('/dashboard/admin/overview');
             } else if (lowerRole === 'moderator') {
                 navigate('/dashboard/moderator/my-profile');
             } else {

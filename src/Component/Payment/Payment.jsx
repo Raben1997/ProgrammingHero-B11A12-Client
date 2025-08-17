@@ -85,7 +85,7 @@ const Payment = () => {
           navigate("/dashboard/user/my-application");
         }
       } catch (error) {
-        Swal.fire("Error!", "Failed to update payment info", "error");
+        Swal.fire("Error!", "Failed to update payment info", error);
       }
     }
 

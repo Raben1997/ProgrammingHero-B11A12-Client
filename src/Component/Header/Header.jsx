@@ -12,6 +12,7 @@ import { TbLogin2 } from 'react-icons/tb';
 export const links = <>
     <li><NavLink to={"/"}>Home</NavLink></li>
     <li><NavLink to={"/allScholarship"}>All Scholarship</NavLink></li>
+    <li><NavLink to={"/contact"}>Contact</NavLink></li>
 </>
 
 const Header = () => {

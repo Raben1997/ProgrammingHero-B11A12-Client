@@ -93,7 +93,7 @@ const ManageScholarships = () => {
                                 <td>{item.universityName}</td>
                                 <td>{item.subject}</td>
                                 <td>{item.degree}</td>
-                                <td>${item.applicationFee}</td>
+                                <td>₹{item.applicationFee}</td>
                                 <td className="flex gap-2 justify-center">
                                     <button
                                         onClick={() => setPreviewScholarship(item)}

@@ -175,7 +175,7 @@ const ScholarshipDetails = () => {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                        {reviews.length > 3 && (
+                        {/* {reviews.length > 2 && (
                             <div className="flex justify-center gap-4 mt-6">
                                 <button ref={prevRef} className="bg-green-600 text-white p-3 rounded-full hover:bg-green-700 shadow transition-all">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -189,7 +189,7 @@ const ScholarshipDetails = () => {
                                     </svg>
                                 </button>
                             </div>
-                        )}
+                        )} */}
                     </div>
                 </div>
             }

@@ -23,6 +23,7 @@ import ScholarshipDetails from "../Pages/ScholarshipDetails";
 import ApplyScholarship from "../Component/ApplyScholarship/ApplyScholarship";
 import Payment from "../Component/Payment/Payment";
 import Overview from "../Pages/Dashboard/AdminDashboard/Overview";
+import Contact from "../Component/Contact/Contact";
 
 export const router = createBrowserRouter([
     {
@@ -52,6 +53,10 @@ export const router = createBrowserRouter([
             {
                 path: "/payment/:id",
                 element: <PrivateRoute><Payment></Payment></PrivateRoute>
+            },
+            {
+                path: "/contact",
+                element: <Contact></Contact>
             },
             {
                 path: "*",
