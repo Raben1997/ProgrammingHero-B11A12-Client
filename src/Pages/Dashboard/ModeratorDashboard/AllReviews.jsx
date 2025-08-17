@@ -55,9 +55,9 @@ const AllReviews = () => {
                             className="bg-green-50 border border-green-100 p-4 rounded-lg shadow hover:shadow-md transition-all flex flex-col justify-between"
                         >
                             <div>
-                                <h3 className="text-green-700 pb-3">
+                                <h4 className="text-green-700 pb-3">
                                     {review.scholarshipName}
-                                </h3>
+                                </h4>
                                 <p className="!p-0 text-gray-700">
                                     <span className="font-medium">University Name:</span> {review.universityName}
                                 </p>
